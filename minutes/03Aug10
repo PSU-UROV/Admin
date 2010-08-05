@@ -1,0 +1,51 @@
+PID:
+
+    r(s) -> P(x)
+            I(x)
+            D(x) -> Plant -
+              ^           |
+              -------------
+
+    r(s) 
+    ---- = P(x)
+     x
+
+    Arriving at a constant
+
+Discussions about Heirarchy:
+    Possible positions 
+        Project Head
+        Tech Lead
+        Secretary
+        Treasurer
+
+Cameras: 
+    Analog vs Digital
+    CCD Pinhole Camera $21 per camera
+    analog NTSC Dome security cam $65 per camera
+
+Domain names:
+    cs.pdx.edu
+    .com, .org?
+    David: .edu is better for sponsoring
+    Dan: getting a domain
+
+Boards:
+    Teensies
+    ARM Board
+    Beagle Board specs
+
+New Gripper:
+    Runs off a motor
+
+Jobs: 
+    Sensors
+    Reading from inputs
+    Writing to outputs
+    SPI out to gyros and teensies to the arm...
+
+Communication:
+    Google Group
+    ikiwiki for updating what you've accomplished
+
+New room:
