@@ -48,8 +48,8 @@ London}}
 {\Large{\bf PSU-ROV 2011}}\\*[3mm]
 {\bf Portland State Univeristy enters into the annual MATE international underwater remote operated vehicle competition} \\*[3mm]
 
-Patrick Bledsoe, Greg Haynes, Spencer O. Krum, Arthur Aldridge, Kristine Sunnerfield,\\
- Allan Dunham, Devin, Dan Colish, Jeff Doughty, Keith Parker, Phil Witham, Dr. Erik Sanchez
+Patrick Bledsoe, Gregory Haynes, Spencer O. Krum, Devin Quirozoliver, Kristine Summerfield,
+ Allan Dunham, Dan Colish, Jeff Doughty, Dr. Erik Sanchez
 
 \end{center}
 
@@ -98,7 +98,7 @@ multi-processor closed-loop control systems. At the competiton, the team will se
 
 \noindent
 {\bf PSU-ROV 2010}
-{\it award number} (PI); dates, total UROV cost: \$2496.06
+{\it Total UROV cost: \$2496.06}
 
 The Portland Sate Univeristy ROV team for the 2010 season sent 5 students and 2 mentors to Hilo, Hawaii where the team successfuly tested their craft. The 2010 ROV
 recieved 70/300 mission points and 216/500 total score.
@@ -106,7 +106,8 @@ recieved 70/300 mission points and 216/500 total score.
 \ \\
 \noindent
 {\bf PSU-ROV 2009}
-{\it award number} (PI); dates, total UROV cost\$481.10
+{\it Total UROV cost: \$481.10}
+
 The Portland State University ROV team for the 2009 season sent 3 students and 1 mentor to Boston, Mass. where the craft did not pass the safety inspection.
 The craft recieved 0/300 mission points and an 80.67/500 total score. 
 
@@ -122,11 +123,10 @@ publishes a list of missions and teams build UROV's specificially to complete th
  but some things are always the same. The competition will take place in a pool; in the 2011 season the pool is the neutral boyancy lab
 operated by NASA in Houston, TX. The UROV and all its control equipment must be powered from a supplied 48 volt DC power supply rated 
 up to 40 amps. The team will be racing the clock, 5 minutes to set up, 15 minutes in pool, and 5 minute clean up. The operators will not 
-be allowed to see the pool durring the mission run; all control of the UROV must be done through the sensors the team has installed in the UROV. 
-
+be allowed to see the pool durring the mission run; all control of the UROV must be done through the sensors the team has installed in the UROV. The UROV and all topside control equipment must be powered from a MATE-supplied DC power supply that provides a maximum of 40 Amps at 48V. 
 \section{Mission}
 
-MATE has not yet published the 2011 Mission objectives. Here is what we do know:
+MATE has not yet published the 2011 Mission objectives. Here is what is known:
 \begin{itemize}
 \item The mission is taking place in June of 2011.
 \item It will be in Houston, in the pool NASA uses to train astronauts to work in zero g, ~40ft deep
@@ -136,12 +136,12 @@ It's really not a lot of information. The team is therefore working on things th
 
 
 \section{Design}
-Portland State aims to win the 2011 MATE underwater ROV competition in June. One of the biggest components of that goal is a world-class design. We plan to use the best underwater thrusters available: 3 phase brushless motors running on 24 volts in an H-bridge configuration. The 24 volt power will be drawn from synchronous buck regulator boards that will be fed 48V DC. The regulator board(s) will be on the ROV meaning our tether will carry 48 volt power instead of some lower voltage, reducing power lost as heat. We have a design that uses 6 thrusters and gives complete control over the ROV’s position in space to the operator; that is the ROV is capable of translation along the x, y, and z axes, and capable of rotation about the x, y, and z axes. Because we will have low power loss in the tether and in voltage level conversion, and because we are procuring the best available thrusters, we expect the ROV to have incredible speed, maneuverability, and thrust. The ROV will be controlled by a laptop computer running custom multi-platform software and will communicate with this computer using the RS232 serial protocol. The ROV will have an ARM microprocessor which will read and write to the controlling laptop, microcontrollers, and sensors. The sensors are one gyroscope and three monodirectional accelerometers, these sensors are externally powered and communicate with the ARM board via SPI. The microcontrollers are externally powered and communicate with the ARM board over RS232. They have 10bit analog to digital(ATD) conversion for mission specific sensing and about 8 pulse width modulated(PWM) signal pins which will be used to control the H bridges to control the thrusters. The ARM board will be running a closed-loop control system, listening to the gyroscope and activating the thrusters to hold the ROV in position. The controlling laptop will issue higher order commands in the form of vectors to the ARM board. The advantage to this scheme over a total control by the user scheme is it enables the ROV to hold position against a current or maintain a certain depth even as it takes on ballast.
+Portland State aims to win the 2011 MATE underwater ROV competition in June. One of the biggest components of that goal is a world-class design. Central to this design are the best underwater thrusters available: 3 phase brushless motors running on 24 volts in an H-bridge configuration. The 24 volt power will be drawn from synchronous buck regulator boards that will be fed 48V DC. The regulator board(s) will be on the ROV meaning our tether will carry 48 volt power instead of some lower voltage, reducing power lost as heat. We have a design that uses 6 thrusters and gives complete control over the ROV’s position in space to the operator; that is the ROV is capable of translation along the x, y, and z axes, and capable of rotation about the x, y, and z axes. Because we will have low power loss in the tether and in voltage level conversion, and because we are procuring the best available thrusters, we expect the ROV to have incredible speed, maneuverability, and thrust. The ROV will be controlled by a laptop computer running custom multi-platform software and will communicate with this computer using the RS232 serial protocol. The ROV will have an ARM microprocessor which will read and write to the controlling laptop, microcontrollers, and sensors. The sensors are one gyroscope and three monodirectional accelerometers, these sensors are externally powered and communicate with the ARM board via SPI. The microcontrollers are externally powered and communicate with the ARM board over RS232. They have 10bit analog to digital(ATD) conversion for mission specific sensing and about 8 pulse width modulated(PWM) signal pins which will be used to control the H bridges to control the thrusters. The ARM board will be running a closed-loop control system, listening to the gyroscope and activating the thrusters to hold the ROV in position. The controlling laptop will issue higher order commands in the form of vectors to the ARM board. The advantage to this scheme over a total control by the user scheme is it enables the ROV to hold position against a current or maintain a certain depth even as it takes on ballast.
 \section{Yet Another Section}
 
 \section{Time Line and Management Plan}
 
-Hmm.. Patrick do this part!
+
 
 \section{Summary:  Significance of proposed work}
 
