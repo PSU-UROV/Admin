@@ -48,7 +48,7 @@ London}}
 {\Large{\bf PDX-ROV 2010}}\\*[3mm]
 {\bf 2010 Project Summary of NR Kobi} \\*[3mm]
 
-Patrick Bledsoe, Gregory Haynes, Spencer O. Krum, Kristine Summerfield, Arthur Aldridge, Phil Witham, Keith Parker, Connor O'Conell, Jeff Doughty, Dr. Erik Sanchez
+Patrick Bledsoe, Gregory Haynes, Spencer Krum, Kristine Summerfield, Arthur Aldridge, Phil Witham, Keith Parker, Connor O'Conell, Jeff Doughty, Dr. Erik Sanchez
 
 \end{center}
 
@@ -134,7 +134,13 @@ lessons from the past two years and produce an ROV better than ever.
 
 \section{Design}
 \subsection{Mechanical}
-The body of NR Kobi is a hollow stainless steel cylinder twenty-two cm  wide and forty cm long. Around this cylinder are girdles made of stainless steel which connect to skis or skids made of extruded aluminum. The skids are about sixy cm long. Between the girldes are horizontal 'wings' that provide structural rigidity and mounts for the four z direction motors. An injection molded clear plastic dome is mounted to the front of the steel cylinder. Four thrusters are mounted to the skids to control lateral movement. Each thruster is on a corner, pointed forty five degrees away from perpindicular. This arrangement provides forward-backward, left-right, and clockwise-counterclockwise. 
+The body of NR Kobi is a hollow stainless steel cylinder twenty-two cm  wide and forty cm long. Around this cylinder are girdles made of stainless steel which connect to skis or skids made of extruded aluminum. The skids are about sixy cm long. Between the girldes are horizontal 'wings' that provide structural rigidity and mounts for the four z direction motors. An injection molded clear plastic dome is mounted to the front of the steel cylinder. Four thrusters are mounted to the skids to control lateral movement. Each thruster is on a corner, pointed at forty five degrees away from perpindicular. This arrangement alows NR Kobi to propel itself forwards, backwards, left, and right, and to spin clockwise and counterclockwise. NR Kobi uses thrusters made from the motors from bilge pumps connected to plastic propellers from model boats.
+\subsection{Electrical}
+NR Kobi is powered from a standard MATE 48VDC/40A power supply. 48V is converted down to 12V by three syncronous regulator boards that were parted out of a telephone box. Two separate circuits are produced and separated by a shotkey diode. One circuit has a maximum current of 4 amps and is used to power the onboard electronics, the other has a maximum current of about 30A and is used to power the thrusters. The higher current in the latter circuit is obtained by connecting two voltage regulators in parallel and connecting them together in such a way that they share the load equally. Power for topside equipment such as laptops is provided by laptop batteries. The electronics circuit powers a 12V ATX power supply that was designed for automotive applications, this in turn provides power for the neocortex, NR Kobi's computer brain. NR Kobi is also equiped with a temperature sensor, the circut for which consists of a LM35 integrated circuit temperature sensor and a microcontroller to perform analog to digital conversion on the output pin of the LM35. Another(smaller) voltage regulator board takes 12V from the thruster circuit and converts it to 6V. This 6V is used for the temperature sensor and for DC servos on the arm. 
+\subsection{Software}
+The software behind NR Kobi enables two human pilots to see three live video streams and control the robot's position and it's robotic arm. There is one laptop topside and an x86 class processor and motherboard and two Atmel microcontrollers on-board the UROV. The laptop runs a program to control the UROV that is written in C++ and uses the Qt library to draw the gui and read from joysticks. Google Chrome is used to view the video stream, which is MJPEG over http. The software on the laptop communicates over ethernet with the software on the x86 using a JSON syntax because parsers for JSON were easy to obtain and implement. The x86 runs a program written in Python that sends/recieves commands and information with the control laptop and a program that grabs compressed JPEG's from usb webcams and pipes them over the network one after another over http in a process called MJPEG or Motion-JPEG. The Python running on the x86 uses PySerial to communicate with the two Atmel microcontrollers via a serial protocol over USB. The microcontrollers, which are programmed in C, accept commands over a very simple newline delimitted serial communication protocol and handle the analog to digital conversion for the sensors and output pulse width modulated signals for the motors. 
+
+
 
 \newpage
 
