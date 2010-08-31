@@ -55,14 +55,14 @@ Patrick Bledsoe, Gregory Haynes, Spencer Krum, Kristine Summerfield, Arthur Aldr
 \noindent
 {\bf PSU-ROV 2010 Summary in Brief}
 {\it Total UROV cost: \$2496.06}
-The Portland State University UROV team 2010 sent 5 students and 2 mentors to Hilo, Hawaii where the team competed against other UROV teams from around the world. The 2010 UROV, NR Kobi, received 70/300 mission points and 216/500 total points, 
+The 2010 Portland State University UROV team 2010 sent 5 students and 2 mentors to Hilo, Hawaii where the team competed against other UROV teams from around the world. The 2010 UROV, NR Kobi, received 70/300 mission points and 216/500 total points, 
 ranking 17th out of 26 international teams.
 
 
 \section{Introduction}
 \noindent
 {\bf MATE Competition:}
-Each year the MATE center hosts an underwater remote operated vehicle competition. The competition is to accumulate the most points
+Each year the MATE center hosts an underwater remote operated vehicle competition. The goal is to accumulate the most points
 in a simulated UROV mission taking place in a pool. There are two classes, one targeted at high schools and 
 the other targeted at colleges and universities. PSU-UROV competed in the latter, the Explorer class. MATE 
 publishes a list of missions and teams build UROVs specifically to complete these missions. The teams are under strict
@@ -86,7 +86,7 @@ simply because the cost of deploying a manned submarine is too high.
 This project has been a learning experience for the team members and a chance to win some accolades for Portland State. Team members learned 
 a variety of interrelated skills through this project. The realities of deadlines, interpersonal conflicts, and budgeting have been experienced, 
 sometimes the hard way. There is a long list of skills that has been developed, ranging from soldering and machining components to deploying 
-multi-processor closed-loop control systems. At the competition in Hawaii, the team will saw other team's solutions to the same problems and used the 
+multi-processor closed-loop control systems. At the competition in Hawaii, the team saw other team's solutions to the same problems and used the 
 opportunity to network with leaders from both industry and academia. 
 \renewcommand{\thepage} {B--\arabic{page}}
 
@@ -134,6 +134,21 @@ lessons from the past two years and produce an ROV better than ever.
 
 \section{Design}
 \subsection{Mechanical}
+NR Kobi's on-board electronics are housed inside a hollow stainless steel
+cylinder 22cm wide and 40cm long, with a plastic dome secured on the front,
+and cables exiting the back. Two sheets of stainless steel encircle
+the cylinder. These girdle sheets are connected by "wings" welded between
+the sheets. The wings are also stainless steel sheet, and have circles cut
+into them that hold the vertical thrusters. The bottoms of the girdle
+sheets are fastened to two pieces of 20cm long extruded aluminum.
+Four thrusters are mounted to the skids to control lateral movement.
+Each thruster is on a corner, pointed forty five degrees away from
+perpendicular.
+This arrangement alows NR Kobi to propel itself forwards, backwards,
+left, and right, and to spin clockwise and counterclockwise. NR Kobi
+uses modified bilge pumps as thrusters, made by removing the impellers,
+and fastening plastic propellers to the drive shaft of the pumps.
+
 The body of NR Kobi is a hollow stainless steel cylinder twenty-two cm  wide and forty cm long. Around this cylinder are girdles made of stainless steel which connect to skis or skids made of extruded aluminum. The skids are about sixy cm long. Between the girldes are horizontal 'wings' that provide structural rigidity and mounts for the four z direction motors. An injection molded clear plastic dome is mounted to the front of the steel cylinder. Four thrusters are mounted to the skids to control lateral movement. Each thruster is on a corner, pointed at forty five degrees away from perpindicular. This arrangement alows NR Kobi to propel itself forwards, backwards, left, and right, and to spin clockwise and counterclockwise. NR Kobi uses thrusters made from the motors from bilge pumps connected to plastic propellers from model boats.
 \subsection{Electrical}
 NR Kobi is powered from a standard MATE 48VDC/40A power supply. 48V is converted down to 12V by three syncronous regulator boards that were parted out of a telephone box. Two separate circuits are produced and separated by a shotkey diode. One circuit has a maximum current of 4 amps and is used to power the onboard electronics, the other has a maximum current of about 30A and is used to power the thrusters. The higher current in the latter circuit is obtained by connecting two voltage regulators in parallel and connecting them together in such a way that they share the load equally. Power for topside equipment such as laptops is provided by laptop batteries. The electronics circuit powers a 12V ATX power supply that was designed for automotive applications, this in turn provides power for the neocortex, NR Kobi's computer brain. NR Kobi is also equiped with a temperature sensor, the circut for which consists of a LM35 integrated circuit temperature sensor and a microcontroller to perform analog to digital conversion on the output pin of the LM35. Another(smaller) voltage regulator board takes 12V from the thruster circuit and converts it to 6V. This 6V is used for the temperature sensor and for DC servos on the arm. 
