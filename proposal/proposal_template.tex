@@ -90,9 +90,9 @@ multi-processor closed-loop control systems. At the competiton, the team will se
 {\bf PSU-ROV 2010}
 {\it Total UROV cost: \$2496.06}
 
-Out of over 400 applicants for the combind competition classes, Portland Sate Univeristy ROV team for the 2010 season qualified for the Internation Competition 
-and then sent 5 students and 2 mentors to Hilo, Hawaii where the team competed successfully. The 2010 ROV recieved 70/300 mission points and 216/500 total points, 
-ranking 17th out of 26 international teams.
+Out of over 400 applicants for the combined competition classes, Portland Sate University ROV team for the 2010 season qualified for the International Competition 
+and then sent 5 students and 2 mentors to Hilo, Hawaii where the team competed successfully. The 2010 ROV received 70/300 mission points and 216/500 total points, 
+ranking 18th out of 26 international teams.
 
 \ \\
 \noindent
@@ -100,7 +100,7 @@ ranking 17th out of 26 international teams.
 {\it Total UROV cost: \$481.10}
 
 The Portland State University ROV team for the 2009 season sent 3 students and 1 mentor to Boston, Mass. where the craft did not pass the safety inspection 
-due to unforseen electrical diffaculties.  The craft recieved 0/300 mission points and an 80.67/500 total score, ranking 28th. 
+due to unforeseen electrical difficulties.  The craft received 0/300 mission points and an 80.67/500 total score, ranking 28th. 
 
 
 \ \\
@@ -110,13 +110,13 @@ due to unforseen electrical diffaculties.  The craft recieved 0/300 mission poin
 
 Each year the MATE center hosts an underwater remote operated vehicle competition. There are two classes, one targeted at high schools and 
 the other targeted at colleges and universities. The latter is called the Explorer class and is the class that PSU-UROV competes in. MATE 
-publishes a list of missions and teams build UROVs specificially to complete these missions. MATE has not yet published the missions for 2011 
-but some componets are standard requirements (i.e. an arm). The competition will take place in a pool for controlled conditions; in the 2011 
-season this pool will be NASA's Neutral Boyancy Lab at the Johnsonville Space Center in Houston, TX. The UROV and all its control equipment 
+publishes a list of missions and teams build UROVs specifically to complete these missions. MATE has not yet published the missions for 2011 
+but some components are standard requirements (i.e. an arm). The competition will take place in a pool for controlled conditions; in the 2011 
+season this pool will be NASA's Neutral Buoyancy Lab at the Johnson Space Center in Houston, TX. The UROV and all its control equipment 
 must be powered from a supplied 48 volt DC power supply rated up to 40 amps provided by MATE. The team will be racing the clock, 
-5 minutes to set up, 15 minutes in pool for missions, and a 5 minute clean up. The operators will not be allowed to see the pool durring the mission run; all 
+5 minutes to set up, 15 minutes in pool for missions, and a 5 minute clean up. The operators will not be allowed to see the pool during the mission run; all 
 control of the UROV must be done through the sensors the team has installed in the UROV. The UROV and all topside control equipment must be 
-powered from a MATE-supplied DC power supply that in standard for all competators. 
+powered from a MATE-supplied DC power supply that in standard for all competitors. 
 \section{Mission}
 
 MATE has not yet published the 2011 Mission objectives. Here is what is known:
@@ -132,26 +132,14 @@ However, this years Challenge will be operating in the pressure at this ~40ft de
 
 \section{Design}
 
-Portland State aims to win the 2011 MATE underwater ROV competition in June. One of the biggest components of that goal is a world-class design. Experience last year has convinced us of the need for certain changes.  First, the bar we need to reach to win is to not only accomplish all of the tasks, but we must do this in less time than the maximum alotted.  The craft must be fast, precise, and maneuverable.  Two changes will achieve this: more powerful thrusters and closed loop control of the motion.  This will allow the operator to quickly position the ROV, precisely as needed for the sensors and gripper, instead of constantly fighting to establish and maintain position against currents and forces from the tether.  
+The Portland State UROV 2011 will be a direct descendant of the two previous years' UROVs. Some techniques are being reused or modified. The tether from 2010 consisted of low gauge copper
+ wire and ethernet for communications. This years' is likely to be similar copper wire but the ethernet will be replaced with serial data for commands and a coaxial cable for video. If
+ funds and sponsors permit, the UROV will have upgraded thrusters of the same type used in commercial applications. Two Teensy 8bit microcontrollers will be swapped for one ARM7 32bit processor.
+8 single direction thrusters will be changed to six bi-directional thrusters and a clever placement of the same will give the 2011 craft control in two more dimensions. 
+Perhaps the largest change is in control scheme. The 2009 and 2010 crafts were controlled directly by their human pilots. The 2011 craft will have a closed loop control system that will automatically compensate for changes in center of mass of prevailing currents. The pilot will give instructions and the UROV will carry them out, no compensation by the human required. 
 
 
-Portland State aims to win the 2011 MATE underwater ROV competition in June. One of the biggest components of that goal is a world-class design. Central 
-to this design are the best underwater thrusters available: 3 phase brushless motors running on 24 volts in an H-bridge configuration. The 24 volt power 
-will be drawn from synchronous buck regulator boards that will be fed 48V DC. The regulator board(s) will be on the ROV meaning our tether will carry 48 
-volt power instead of some lower voltage, reducing power lost as heat. We have a design that uses 6 thrusters and gives complete control over the ROV’s 
-position in space to the operator; that is the ROV is capable of translation along the x, y, and z axes, and capable of rotation about the x, y, and z axes. 
-Because we will have low power loss in the tether and in voltage level conversion, and because we are procuring the best available thrusters, we expect the 
-ROV to have incredible speed, maneuverability, and thrust. The ROV will be controlled by a laptop computer running custom multi-platform software and will 
-communicate with this computer using the RS232 serial protocol. The ROV will have an ARM microprocessor which will read and write to the controlling laptop, 
-microcontrollers, and sensors. The sensors are one gyroscope and three monodirectional accelerometers, these sensors are externally powered and communicate 
-with the ARM board via SPI. The microcontrollers are externally powered and communicate with the ARM board over RS232. They have 10bit analog to digital(ATD) 
-conversion for mission specific sensing and about 8 pulse width modulated(PWM) signal pins which will be used to control the H bridges to control the thrusters. 
-The ARM board will be running a closed-loop control system, listening to the gyroscope and activating the thrusters to hold the ROV in position. The 
-controlling laptop will issue higher order commands in the form of vectors to the ARM board. The advantage to this scheme over a total control by the user 
-scheme is it enables the ROV to hold position against a current or maintain a certain depth even as it takes on ballast.
-\section{Yet Another Section}
-
-\section{Time Line and Management Plan}
+\section{Time Line}
 
 Meeting Agenda List (assumes that planned meetings start when the
 mission tasks are issued, MATE dates are identical to last year, and
@@ -285,31 +273,31 @@ shipment)
 \end{itemize}
 
 
-This timeline is very aggressive once the mission tasks are given.
-There's a little bit of slack given from mid Jan through Feb. I
-haven't been working with you guys on software/controls/etc, so I
-couldn't be very specific about the pre-Nov25th period.
 
-Tell me what you think. Any suggested revisions?
+\section{Management Plan}
 
-\section{Summary:  Significance of proposed work}
+Portland State aims to win the 2011 MATE underwater ROV competition in
+June. Experience last year has convinced us of the need for certain changes.
+First, the bar we need to reach to win is to not only accomplish all of the
+tasks, but to do this in less time than the maximum allotted. The craft must be
+fast, precise, and maneuverable. Two changes will achieve this: more powerful
+thrusters and closed loop control of the motion. This will allow the operator
+to quickly position the ROV, precisely as needed for the sensors and gripper,
+instead of constantly fighting to establish and maintain position against cur-
+rents and forces from the tether. Second, the team needs considerable practice
+time. The team must be prepared to accomplish all the tasks with military-like
+precision. The team must also practice for it's engineering evaluation. To en-
+sure practice time before the competition this year's team is making changes.
+One person is always designated the project manager. He or she has the final
+say in any argument, hopefully this clear structure will prevent long arguments
+from becoming distractions. A timeline has been written up and individual tasks
+are being assigned. This structure gives team members the ability to work on
+person-sized projects in a project-sized window. The hope here is that when
+meetings are held, each individual can present work they have already done, as
+opposed to long meetings where people argue about what they could do or want
+to do.
 
-\subsection{Intellectual Merit}
-
-\subsection{Broader Impacts}
 
 
-
-\newpage
-\pagenumbering{arabic}
-\renewcommand{\thepage} {E--\arabic{page}}
-
-\bibliography{draft}
-\bibliographystyle{jponew}
-
-\newpage
-\pagenumbering{arabic}
-\renewcommand{\thepage} {G--\arabic{page}}
-\noindent{\Large \bf BUDGET JUSTIFICATION}
 
 \end{document}
