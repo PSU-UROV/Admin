@@ -1,0 +1,23 @@
+﻿Sponsorship Form
+Note: This form can be completed either by hand and faxed to RobotShop or submitted electronically (as an attachment). You are free to add lines where needed.
+Contact Information
+Name (please print):                    (first)Spencer  (last) Krum
+Contact E-mail (no spaces):        krum.spencer@gmail.com
+Contact Telephone:                     (619) 980 7820 extension:
+Complete Address:                     709 SW 16th Ave #110
+Affiliation (if applicable):           _Portland State University_________________________
+Additional Information:             _________________________________________
+Project Objective
+Please describe (~ 1 to 2 paragraphs) what your project will be used for.
+This is a proposal to sponsor the Portland State University Remote Operated Vehicle team to compete in the 2011 International Aerial Robotics Competition (IARC) hosted by the Association for Unmanned Vehicle Systems International (AUVSI). The team is comprised of students studying mechanical engineering, chemistry, computer science, and physics who will build an autonomous helicopter to compete in August.:
+The IARC is specifically designed so that no existing craft can complete the mission. The craft will have to identify and travel through a window without being detected by a surveillance camera. Once inside, the robot must read signs on the walls written in Arabic, and navigate to a particular office. Next, the robot needs to identify and pick up a USB Flash drive and replace it with an identical one. Finally, the craft needs to escape without being detected. The total time allowed is ten minutes.
+Project Description
+Please describe (~ 1 to 2 paragraphs) how you plan to meet these objectives by describing the project itself. Any images, drawings or CAD can be included at bottom.
+The flying robot will be a quad-rotor under computer control. The robot will be in radio communication with a remote computer that will handle the complex navigational computation. Hopefully, your product will be used to build a map of forward distances and perform SLAM.  Infrared light emitting diodes and photo-sensors will be used for proximity detection. Accelerometers, gyroscopes, and magnetometers will be used to ensure level flight. In 2009 and 2010, the Portland State Robotics Team competed in the Marine Advancement for Technology Education (MATE) Center's annual international competition, demonstrating the ability to produce a working machine under budget and time constraints. 
+Sponsorship Sought and Benefits to RobotShop
+Please describe (~ 1 to 2 paragraphs) the sponsorship you would like RobotShop to provide and the benefit(s) to RobotShop for sponsoring your project.
+We would like RobotShop to provide us with one Hokuyo URG-04LX-UG01 Scanning Laser Rangefinder for our robot. We would like this laser rangefinder because we don’t think we can get enough data to perform SLAM without it and because we don’t have the technical skill to make a our own version. If this is not possible, we would like a discount on the rangefinder. In exchange we can provide RobotShop with advertising. We can provide RobotShop with clearly displayed logos on our final quadrotor during the competing. We can also put the RobotShop logo and links on our team T-shirts and Robot shop would be included in the sponsorship page on the competition’s website. We can go to the IARC competition and do very well, making others in the tournament look at our report, where they will see that the Hokuyo Scanning Laser Rangefinder played a central role in our decisive victory.
+Submit to:
+RobotShop Support Center
+http://robotshop.helpserve.com/index.php?_m=tickets&_a=submit
+General Information
